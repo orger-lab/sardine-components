@@ -1,5 +1,5 @@
 # Components
-Components representing hardware or data processing functions for use with Sardine.
+Components representing hardware or data processing functions for use with **[Sardine](https://github.com/orger-lab/sardine)**.
 
 ## NuGet Packages
 | Component         | Package  | Views  |
