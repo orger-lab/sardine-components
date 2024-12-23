@@ -57,7 +57,7 @@ A component that uses the metadata service is also present, and allows setting m
 1. Double click the name of a vessel to open its UI. Grayed out vessels do not have UIs.
 2. All vessels operating correctly will have a green indicator to the left of their name.
 3. The 'Reload' button immediatly invalidates a vessel and relaunches it.
-4. Pressing 'Activate' and 'Stop' will respectively activate data operations associated with that vessel or stop them. In the example, activating one of the writers will immediately cause them to start writing to disk.
+4. Pressing 'Activate' and 'Stop' will respectively activate data operations associated with that vessel or stop them. In the example, activating one of the writers will immediately cause them to start writing to disk. The percentage indicator represents queue occupation.
 5. To choose a folder to record data to, open the Experiment Metadata vessel and export a recording path. You can either choose a folder name at will, or fill in some metadata fields and ask the controller to auto-generate a name. The exported recording path will be transferred to the writers.
 6. Through the menus, you can access the Logger, the Graph view, and through the File menu you can save and restore layouts.
 
