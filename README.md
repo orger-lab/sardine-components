@@ -24,9 +24,10 @@ Components representing hardware or data processing functions for use with **[Sa
 |         |   ❌  |  |
 
 ## Quick Start
+Operating System requirements: Windows 10 version 1607 or above
+Visual Studio requirement: version 17.8 or above
 
 ### Larval zebrafish tail tracker
-Operating System requirements: Windows 10 version 1607 or above
 This example shows live tracking of a video recording of the tail of a head-restrained larval zebrafish, collected at 700 fps and played back. 
 To accomplish the tracking, OpenCV (through the  is used to process the video images. 
 
@@ -39,3 +40,8 @@ git clone https://github.com/orger-lab/sardine-components
 2. Open `Sardine-Components.sln` in Visual Studio
 3. Select `FictiveFishTrackerExampleApp` as the startup project
 4. Build and run
+
+<div align="center">
+  <img src="samples/FictiveFishTrackerExampleApp/graph.png" width="300">
+  <img src="samples/FictiveFishTrackerExampleApp/screenshot.png" width="300">
+</div>
