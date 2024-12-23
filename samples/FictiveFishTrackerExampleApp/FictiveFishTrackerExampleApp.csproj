@@ -28,4 +28,15 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="opencv\" />
+  </ItemGroup>
+
+  <ItemGroup>   
+
+	  <ContentWithTargetPath Include="opencv\**">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		  <TargetPath>%(RecursiveDir)\%(Filename)%(Extension)</TargetPath>
+	  </ContentWithTargetPath>
+  </ItemGroup>
 </Project>
