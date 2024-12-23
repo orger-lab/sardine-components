@@ -1,0 +1,37 @@
+<sardine:VesselUserControl x:Class="Sardine.Tracking.ZebraHRTailTracking.Views.WPF.MPTailTracking_UI"
+                           x:TypeArguments="tracking:MPTailTracking"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+            xmlns:sardine="clr-namespace:Sardine.Core.Views.WPF;assembly=Sardine.Core.Views.WPF"
+            xmlns:tracking="clr-namespace:Sardine.Tracking.ZebraHRTailTracking;assembly=Sardine.Tracking.ZebraHRTailTracking"
+             xmlns:local="clr-namespace:Sardine.Tracking.ZebraHRTailTracking.Views.WPF"
+             d:DataContext="{d:DesignInstance IsDesignTimeCreatable=False, Type=tracking:MPTailTracking}"
+             mc:Ignorable="d" 
+             Background="Gray"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <WrapPanel Grid.Row="0">
+            <Label Content="Threshold"/>
+            <TextBox Width="70" Text="{Binding Path=BodySearchThreshold, UpdateSourceTrigger=PropertyChanged}" MouseWheel="TextBox_MouseWheel"/>
+        </WrapPanel>
+        <WrapPanel Grid.Row="1">
+            <Label Content="StartX"/>
+            <TextBox Width="70" Text="{Binding Path=StartX, UpdateSourceTrigger=PropertyChanged}" MouseWheel="TextBox_MouseWheel"/>
+            <Label Content="StartY"/>
+            <TextBox Width="70" Text="{Binding Path=StartY, UpdateSourceTrigger=PropertyChanged}" MouseWheel="TextBox_MouseWheel"/>
+        </WrapPanel>
+        <WrapPanel Grid.Row="2">
+            <Label Content="EndX"/>
+            <TextBox Width="70" Text="{Binding Path=EndX, UpdateSourceTrigger=PropertyChanged}" MouseWheel="TextBox_MouseWheel"/>
+            <Label Content="EndY"/>
+            <TextBox Width="70" Text="{Binding Path=EndY, UpdateSourceTrigger=PropertyChanged}" MouseWheel="TextBox_MouseWheel"/>
+        </WrapPanel>
+    </Grid>
+</sardine:VesselUserControl>

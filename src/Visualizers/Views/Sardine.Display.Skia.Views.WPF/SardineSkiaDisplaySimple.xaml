@@ -1,0 +1,20 @@
+<sardine:VesselUserControl
+             x:Class="Sardine.Display.Skia.Views.WPF.SardineSkiaDisplaySimple"
+             x:TypeArguments="sardineSkia:SkiaSharpDisplay"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Sardine.Display.Skia.Views.WPF"
+             xmlns:sardineSkia="clr-namespace:Sardine.Display.Skia;assembly=Sardine.Display.Skia"
+             xmlns:skiaWPF="clr-namespace:SkiaSharp.Views.WPF;assembly=SkiaSharp.Views.WPF"
+             xmlns:sardine="clr-namespace:Sardine.Core.Views.WPF;assembly=Sardine.Core.Views.WPF"
+             d:DataContext="{d:DesignInstance IsDesignTimeCreatable=False, Type=sardineSkia:SkiaSharpDisplay}"
+             Background="Gray"
+             mc:Ignorable="d" d:Width="600" d:Height="700">
+    <Grid>
+        <StackPanel>
+            <skiaWPF:SKElement x:Name="SKElement_Display" d:Width="600"  d:Height="600" Width="{Binding Path=ViewportWidth, Mode=TwoWay}" MouseLeftButtonDown="SKElement_Display_MouseLeftButtonDown" PaintSurface="SKElement_Display_PaintSurface" Height="{Binding Path=ViewportHeight, Mode=TwoWay}" />
+        </StackPanel>
+    </Grid>
+</sardine:VesselUserControl>
