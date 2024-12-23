@@ -33,7 +33,7 @@ To accomplish the tracking, OpenCV (through the  is used to process the video im
 
 This example enacts a graph that is composed only by data connections.
 Images produced by the camera (here read from a prerecorded file) are passed to a binary recorder, to a display, and to a background subtraction operation.
-The result of the background subtraction is then used to track 16 equidistant points along the fish tail by iteratively searching for the center of mass across a 180deg arc drawn from the previous tracked point.
+The result of the background subtraction is then used to track 16 equidistant points along the fish tail by iteratively searching for the center of mass across an arc drawn around the previous tracked point.
 These results are displayed on screen, and also saved to a text file.
 A component that uses the metadata service is also present, and allows setting metadata fields and the save path for the output data.
 
