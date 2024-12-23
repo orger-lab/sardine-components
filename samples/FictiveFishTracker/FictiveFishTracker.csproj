@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Sardine.Core" Version="1.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Constructs\Sardine.ImageProcessing\Sardine.ImageProcessing.csproj" />
+    <ProjectReference Include="..\..\src\Data Processes\Sardine.ImageProcessing.BGSubtraction.OpenCV\Sardine.ImageProcessing.BGSubtraction.OpenCV.csproj" />
+    <ProjectReference Include="..\..\src\Data Processes\Sardine.Recording.Data.Text\Sardine.Recording.Data.Text.csproj" />
+    <ProjectReference Include="..\..\src\Data Processes\Sardine.Recording.Metadata.Zebrafish\Sardine.Recording.Metadata.Zebrafish.csproj" />
+    <ProjectReference Include="..\..\src\Data Processes\Sardine.Recording.Stream.Binary\Sardine.Recording.Stream.Binary.csproj" />
+    <ProjectReference Include="..\..\src\Data Processes\Sardine.Tracking.ZebraHRTailTracking\Sardine.Tracking.ZebraHRTailTracking.csproj" />
+    <ProjectReference Include="..\..\src\Devices\Sardine.Test.AVIReader\Sardine.Test.AVIReader.csproj" />
+    <ProjectReference Include="..\..\src\Visualizers\Sardine.Display.Skia\Sardine.Display.Skia.csproj" />
+  </ItemGroup>
+
+</Project>

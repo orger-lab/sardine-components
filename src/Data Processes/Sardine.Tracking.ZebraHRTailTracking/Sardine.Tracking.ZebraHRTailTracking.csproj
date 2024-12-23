@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Sardine.Core" Version="1.1.0" />
+    <PackageReference Include="SkiaSharp" Version="2.88.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Constructs\Sardine.Constructs\Sardine.Constructs.csproj" />
+    <ProjectReference Include="..\..\Constructs\Sardine.ImageProcessing\Sardine.ImageProcessing.csproj" />
+  </ItemGroup>
+
+</Project>

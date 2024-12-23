@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows7.0</TargetFramework>
+    <Nullable>warnings</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Sardine.Core.Views.WPF" Version="1.0.0" />
+    <PackageReference Include="SkiaSharp.Views.WPF" Version="2.88.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Sardine.Display.Skia\Sardine.Display.Skia.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Visualizers\Sardine.Display.Skia\Sardine.Display.Skia.csproj" />
+    <ProjectReference Include="..\..\Visualizers\Sardine.Display\Sardine.Display.csproj" />
+    <ProjectReference Include="..\Sardine.Tracking.ZebraHRTailTracking\Sardine.Tracking.ZebraHRTailTracking.csproj" />
+  </ItemGroup>
+
+</Project>

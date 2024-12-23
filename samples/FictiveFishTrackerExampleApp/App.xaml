@@ -1,0 +1,9 @@
+﻿<sardine:SardineApplication
+            x:Class="FictiveFishTrackerExampleApp.App"
+            x:TypeArguments="tracker:TailTracker"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:FictiveFishTrackerExampleApp"
+             xmlns:tracker="clr-namespace:FictiveFishTracker;assembly=FictiveFishTracker"
+             xmlns:sardine="clr-namespace:Sardine.Core.Views.WPF;assembly=Sardine.Core.Views.WPF"
+/>

@@ -1,0 +1,85 @@
+<sardine:VesselUserControl x:Class="Sardine.Recording.Metadata.Views.WPF.ZebrafishMetadataManager_UI"
+                          x:TypeArguments="metadata:ZebrafishExperimentMetadataController"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:sardine="clr-namespace:Sardine.Core.Views.WPF;assembly=Sardine.Core.Views.WPF"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+            xmlns:metadata="clr-namespace:Sardine.Recording.Metadata.Zebrafish;assembly=Sardine.Recording.Metadata.Zebrafish"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+                           d:DataContext="{d:DesignInstance IsDesignTimeCreatable=False, Type=metadata:ZebrafishExperimentMetadataController}"
+             xmlns:local="clr-namespace:Sardine.Recording.Metadata.Views.WPF"
+             mc:Ignorable="d" Background="Gray">
+    <Grid>
+        <StackPanel>
+        <WrapPanel>
+                <Grid Width="500" Margin="5,5,5,5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition Height="20" />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Label Content="Base Path" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="1" HorizontalAlignment="Right"/>
+                    <TextBox x:Name="TextBox_ExperimentBasePath" Grid.Row="0" Text="{Binding Path=Metadata.ExperimentFolderBase, UpdateSourceTrigger=PropertyChanged}" Grid.Column="1" Grid.ColumnSpan="4" />
+                    <Button x:Name="Button_SetBasePath" Content="Choose .." Grid.Row="0" Grid.Column="6" Click="Button_SetBasePath_Click"/>
+
+                    <Label Content="Folder Name" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right"/>
+                    <TextBox x:Name="TextBox_FolderName" Text="{Binding Path=Metadata.ExperimentFolderName, UpdateSourceTrigger=PropertyChanged}" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4"/>
+                    <Button x:Name="Button_GenerateFolderName" Content="Make Name" Grid.Row="1" Grid.ColumnSpan="1" Grid.Column="5" Click="Button_GenerateFolderName_Click"/>
+                    
+
+                    <Label Content="Name" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right"/>
+                    <TextBox x:Name="TextBox_Name" Text="{Binding Path=Metadata.Name, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Stretch" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3"/>
+                    <Label Content="Version" Grid.Row="3"  Grid.Column="4" HorizontalAlignment="Right"/>
+                    <TextBox x:Name="TextBox_Version" Text="{Binding Path=Metadata.Version, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Stretch" Grid.Row="3" Grid.Column="5"/>
+                    <Label Content="Author" Grid.Row="4" Grid.Column="0" HorizontalAlignment="Right"/>
+                    <TextBox x:Name="TextBox_Author" Text="{Binding Path=Metadata.Author, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Stretch" Grid.Row="4" Grid.Column="1"/>
+                    <Label Content="ID" Grid.Row="4" Grid.Column="2" HorizontalAlignment="Right"/>
+                    <TextBox x:Name="TextBox_ID" Text="{Binding Path=Metadata.ID, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Stretch" Grid.Row="4" Grid.Column="3"/>
+                    <Label Content="Condition" Grid.Row="4" Grid.Column="4" HorizontalAlignment="Right"/>
+                    <TextBox x:Name="TextBox_Condition" Text="{Binding Path=Metadata.Condition, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Stretch" Grid.Row="4" Grid.Column="5"/>
+                </Grid>
+                <StackPanel Width="180" Margin="5,5,5,5">
+                    <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Label Content="Fish" FontWeight="Bold" Margin="10,-5,0,0" Height="24" Grid.Row="0" Grid.ColumnSpan="4" HorizontalAlignment="Center"/>
+                    <Rectangle Width="70"  Margin="10,0,0,5" Fill="Black" Height="2" Grid.Row="1" Grid.ColumnSpan="4" HorizontalAlignment="Center"/>
+                    <Label Content="Line" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right"/>
+                        <TextBox x:Name="TextBox_FishLine" Text="{Binding Path=Metadata.Fish.Line, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Stretch" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3"/>
+                    <Label Content="Tank" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right"/>
+                        <TextBox x:Name="TextBox_FishTank" Text="{Binding Path=Metadata.Fish.Tank, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Stretch" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3"/>
+                        <Label Content="Age" Grid.Row="4" Grid.Column="2" HorizontalAlignment="Right"/>
+                        <TextBox x:Name="TextBox_FishAge"  Text="{Binding Path=Metadata.Fish.Age, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Stretch" Grid.Row="4" Grid.Column="3"/>
+                </Grid>
+            </StackPanel>
+        </WrapPanel>
+            <Rectangle  VerticalAlignment="Center" Height="1" HorizontalAlignment="Center" Width="400" Fill="Black" Margin="10,10,10,10"/>
+            <Label Content="Description" Margin="10,0,0,0" />
+            <TextBox x:Name="TextBox_Description" Margin="10,0,10,10" Width="680" AcceptsReturn="True" TextWrapping="Wrap" Text="{Binding Path=Metadata.Description, UpdateSourceTrigger=PropertyChanged}" Height="100" HorizontalAlignment="Left"/>
+            <Button x:Name="Button_LoadTemplate" Content="Load Experiment Template" Click="Button_LoadTemplate_Click"/>
+            <Button x:Name="Button_ExportMetadata" Content="Export" Click="Button_ExportMetadata_Click"/>
+            
+        </StackPanel>
+    </Grid>
+</sardine:VesselUserControl>

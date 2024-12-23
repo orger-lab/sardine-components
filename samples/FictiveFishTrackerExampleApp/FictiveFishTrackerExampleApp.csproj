@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Sardine.Core.Views.WPF" Version="1.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Data Processes\Sardine.Tracking.ZebraHRTailTracking.DisplayExtensions\Sardine.Tracking.ZebraHRTailTracking.DisplayExtensions.csproj" />
+    <ProjectReference Include="..\..\src\Data Processes\Views\Sardine.ImageProcessing.BGSubtraction.Views.WPF\Sardine.ImageProcessing.BGSubtraction.OpenCV.Views.WPF.csproj" />
+    <ProjectReference Include="..\..\src\Data Processes\Views\Sardine.Recording.Metadata.Zebrafish.Views.WPF\Sardine.Recording.Metadata.Zebrafish.Views.WPF.csproj" />
+    <ProjectReference Include="..\..\src\Data Processes\Views\Sardine.Tracking.ZebraHRTailTracking.Views.WPF\Sardine.Tracking.ZebraHRTailTracking.Views.WPF.csproj" />
+    <ProjectReference Include="..\..\src\Utils\Sardine.Utils.Measurements\Sardine.Utils.Measurements.csproj" />
+    <ProjectReference Include="..\..\src\Visualizers\Views\Sardine.Display.Skia.Views.WPF\Sardine.Display.Skia.Views.WPF.csproj" />
+    <ProjectReference Include="..\FictiveFishTracker\FictiveFishTracker.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="output_converted_1_cropped.avi">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
