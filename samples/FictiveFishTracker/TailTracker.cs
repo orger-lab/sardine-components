@@ -18,7 +18,8 @@ namespace FictiveFishTracker
         public Vessel<MPTailTracking> TrackingAlgorithm { get; }
         public Vessel<PositiveDiffWithMinBG> BGSubtractor { get; }
         public Vessel<SkiaSharpDisplay> BehaviourDisplay { get; }
-        public Vessel<AVIReader> MockCamera { get; }
+        public Vessel<AVIReader> MockCameraService { get; }
+        public Vessel<MoviePlayer> MockCamera { get; }
         public Vessel<TextMessageRecorder> OutputWriter { get; }
         public Vessel<SardineBinaryImageWriter> BinaryWriter { get; }
         public Vessel<ZebrafishExperimentMetadataController> ExperimentMetadata { get; }
@@ -28,10 +29,13 @@ namespace FictiveFishTracker
             ExperimentMetadata = Freighter.Freight(builder: Current.Get<ZebrafishExperimentMetadataController>,
                                                    initializer: (metadataService) => metadataService.Metadata.ExperimentFolderBase = @"C:\");
 
+            MockCameraService = Freighter.Freight(builder: () => new AVIReader());
+
             string filePath = @"output_converted_1_cropped.avi";
-            MockCamera = Freighter.Freight(() => new AVIReader(filePath));
-            MockCamera.SourceRate = 700;
-            MockCamera.AddSource(AVIReaderSource.SourceFrame);
+            MockCamera = Freighter.Freight(MockCameraService,
+                                           (cameraService) => cameraService.GetPlayer(filePath));
+            MockCamera.SourceRate = 350;
+            MockCamera.AddSource(MoviePlayerSource.SourceFrame);
 
             BGSubtractor = Freighter.Freight(() => new PositiveDiffWithMinBG());
             BGSubtractor.AddTransformer<IImageFrame, IImageFrame>(BackgroundSubtracterTransformer.Transform, [MockCamera]);
@@ -41,7 +45,7 @@ namespace FictiveFishTracker
             TrackingAlgorithm.AddTransformer<IImageFrame, MPTailTrackingResult>(MPTailTracking.Transform, [BGSubtractor]);
             TrackingAlgorithm.SetMetadataCollection(MetadataCollectionMethods.CollectTailTracker);
 
-            BehaviourDisplay = SkiaSharpDisplay.GetVessel([MockCamera, TrackingAlgorithm], 10);
+            BehaviourDisplay = SkiaSharpDisplay.GetVessel([MockCamera, TrackingAlgorithm], 30);
 
             OutputWriter = Freighter.Freight(() => new TextMessageRecorder());
             OutputWriter.AddSink<ITextWritable>(TextMessageRecorder.Sink);
