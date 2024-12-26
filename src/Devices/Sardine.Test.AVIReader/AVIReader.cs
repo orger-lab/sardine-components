@@ -1,21 +1,17 @@
 ﻿using OpenCV.Net;
-using System.Reflection.PortableExecutable;
 using System.Runtime.InteropServices;
 
 namespace Sardine.Test.AVIReader
 {
     public class AVIReader
     {
-        public bool AddNoise { get; set; }
-        public int OutputFrameCount { get; internal set; } = 0;
+        public AVIReader() { }
 
-        public int Height { get; } = 0;
-        public int Width { get; } = 0;
-
-        public IReadOnlyList<byte[]> AllFrames { get; }
-
-        public AVIReader(string path)
+        public MoviePlayer GetPlayer(string path)
         {
+            int height = 0;
+            int width = 0;
+
             Capture stream = Capture.CreateFileCapture(path);
 
             List<byte[]> frames = new List<byte[]>();
@@ -31,8 +27,8 @@ namespace Sardine.Test.AVIReader
                 int rem = size_row_raw % 4;
                 int width_step = size_row_raw + rem;
 
-                if (Height == 0) Height = frame.Height;
-                if (Width == 0) Width = width_step;
+                if (height == 0) height = frame.Height;
+                if (width == 0) width = width_step;
 
                 var imageSize = new Size(frame.Width, frame.Height);
 
@@ -40,10 +36,10 @@ namespace Sardine.Test.AVIReader
 
                 CV.Split(frame, singleColorFrame, null, null, null);
 
-                byte[] imageData = new byte[(Width) * Height];
+                byte[] imageData = new byte[(width) * height];
 
                 Marshal.Copy(singleColorFrame.ImageData, imageData, 0, frame.Width * frame.Height);
-                
+
                 frame.Close();
                 singleColorFrame.Close();
 
@@ -51,8 +47,8 @@ namespace Sardine.Test.AVIReader
             }
 
             stream.Close();
-            AllFrames = frames;
 
+            return new MoviePlayer(frames, width, height);
         }
     }
 }
