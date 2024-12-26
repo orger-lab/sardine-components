@@ -5,23 +5,37 @@ Components representing hardware or data processing functions for use with **[Sa
 ### Constructs
 | Project Name | NuGet  | Description |
 | :---------------- | :------: | :----: |
-|         |   ❌  |  |
+| Sardine.Constructs        |   ❌  |  |
+| Sardine.ImageProcessing        |   ❌  |  |
 ### Data Processes
 | Project Name | NuGet  | Description |
 | :---------------- | :------: | :----: |
-|         |   ❌  |  |
+| Sardine.ImageProcessing.BGSubtraction.OpenCV        |   ❌  |  |
+| Sardine.ImageProcessing.BGSubtraction       |   ❌  |  |
+| Sardine.Recording.Data.Text       |   ❌  |  |
+| Sardine.Recording.Metadata.Zebrafish     |   ❌  |  |
+| Sardine.Recording.Metadata        |   ❌  |  |
+| Sardine.Recording.Stream.Binary     |   ❌  |  |
+| Sardine.Tracking.ZebraHRTailTracking.DisplayExtensions      |   ❌  |  |
+| Sardine.Tracking.ZebraHRTailTracking      |   ❌  |  |
+| Sardine.ImageProcessing.BGSubtraction.Views.WPF       |   ❌  |  |
+| Sardine.Recording.Metadata.Zebrafish.Views.WPF     |   ❌  |  |
+| Sardine.Tracking.ZebraHRTailTracking.Views.WPF      |   ❌  |  |
 ### Devices
 | Project Name | NuGet  | Description |
 | :---------------- | :------: | :----: |
-|         |   ❌  |  |
+| Sardine.Test.AVIReader        |   ❌  |  |
+| Sardine.Test.BinaryStreamToImageFrameReader        |   ❌  |  |
 ### Utils
 | Project Name | NuGet  | Description |
 | :---------------- | :------: | :----: |
-|         |   ❌  |  |
+| Sardine.Utils.Measurements        |   ❌  |  |
 ### Visualizers
 | Project Name | NuGet  | Description |
 | :---------------- | :------: | :----: |
-|         |   ❌  |  |
+|  Sardine.Display.Skia       |   ❌  |  |
+|  Sardine.Display.Skia.Views      |   ❌  |  |
+|  Views/Sardine.Display.Skia.Views.WPF      |   ❌  |  |
 
 ## Quick Start
 + Operating System requirements: Windows 10 version 1607 or above
