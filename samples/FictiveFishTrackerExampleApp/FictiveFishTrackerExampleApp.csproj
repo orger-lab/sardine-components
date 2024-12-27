@@ -9,10 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Sardine.Core.Views.WPF" Version="1.1.2" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\..\src\Data Processes\Sardine.Tracking.ZebraHRTailTracking.DisplayExtensions\Sardine.Tracking.ZebraHRTailTracking.DisplayExtensions.csproj" />
     <ProjectReference Include="..\..\src\Data Processes\Views\Sardine.ImageProcessing.BGSubtraction.Views.WPF\Sardine.ImageProcessing.BGSubtraction.OpenCV.Views.WPF.csproj" />
     <ProjectReference Include="..\..\src\Data Processes\Views\Sardine.Recording.Metadata.Zebrafish.Views.WPF\Sardine.Recording.Metadata.Zebrafish.Views.WPF.csproj" />
@@ -38,5 +34,9 @@
 		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		  <TargetPath>%(RecursiveDir)\%(Filename)%(Extension)</TargetPath>
 	  </ContentWithTargetPath>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Sardine.Core.Views.WPF" Version="1.1.7" />
   </ItemGroup>
 </Project>

@@ -11,6 +11,7 @@ namespace ExampleSystem
 
         public MySystem()
         {
+            string? cameraSN = Current.SettingsProvider.FetchSetting("CameraSettings", "CameraSN")?.Value;
 
             CameraProvider = Freighter.Freight(
                     builder: () => new CameraService()
@@ -18,7 +19,7 @@ namespace ExampleSystem
 
             ImagingCamera = Freighter.Freight(
                     CameraProvider,
-                    builder: (provider) => provider.GetCameras().Where((camera) => camera.SerialNumber == "SN_Test").FirstOrDefault()!,
+                    builder: (provider) => provider.GetCameras().Where((camera) => camera.SerialNumber == cameraSN ).FirstOrDefault()!,
                     initializer: (provider, camera) => camera.Start(),
                     invalidator: (provider, camera) => camera.Stop()
                             );

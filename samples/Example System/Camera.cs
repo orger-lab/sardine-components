@@ -38,6 +38,12 @@
 
         public void Start() { IsRunning = true; frameGenerationTimer.Enabled = true; }
         public void Stop()  { IsRunning = false; frameGenerationTimer.Enabled = false; framesBehind = 0; }
+
+        public void BreakCamera()
+        {
+            throw new Exception("An error was thrown!");
+        }
+
         public CameraFrame? GetNextFrame()
         {
             if (!IsRunning)
