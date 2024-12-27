@@ -16,4 +16,10 @@
     <ProjectReference Include="..\Example System\Example System.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="SARDINE.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
