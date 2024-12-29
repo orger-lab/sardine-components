@@ -37,6 +37,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Sardine.Core.Views.WPF" Version="1.1.7" />
+    <PackageReference Include="Sardine.Core.Views.WPF" Version="1.1.12" />
   </ItemGroup>
 </Project>
