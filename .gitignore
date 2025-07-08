@@ -238,3 +238,4 @@ OrgerLab/OrgerLab\.Modules\.Display/FastFowardDisplay\.cs
 OrgerLab/Redwood\.Tracking/
 
 OrgerLab/packages/
+*.dll
