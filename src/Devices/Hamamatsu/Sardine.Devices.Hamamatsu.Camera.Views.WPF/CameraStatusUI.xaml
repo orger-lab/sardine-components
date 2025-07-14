@@ -1,0 +1,89 @@
+﻿<sardine:VesselUserControl
+             x:Class="Sardine.Devices.Hamamatsu.Camera.Views.WPF.CameraStatusUI"
+             x:TypeArguments="hamamatsu:HamamatsuCamera"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:hamamatsu="clr-namespace:Sardine.Devices.Hamamatsu.Camera;assembly=Sardine.Devices.Hamamatsu.Camera"
+             xmlns:sardine="clr-namespace:Sardine.Core.Views.WPF;assembly=Sardine.Core.Views.WPF"
+             xmlns:hamamatsuAPI="clr-namespace:Sardine.Devices.Hamamatsu.Camera.API;assembly=Sardine.Devices.Hamamatsu.Camera.API"
+             mc:Ignorable="d"
+             d:DataContext="{d:DesignInstance IsDesignTimeCreatable=False, Type=hamamatsu:HamamatsuCamera}"
+             Height ="150" Width="150" Background="Gray">
+    <Grid>
+
+        <DockPanel>
+            <Label FontSize="15" HorizontalAlignment="Center">
+                <Label.Style>
+                    <Style TargetType="Label">
+                        <Setter Property="Content" Value="No connection"/>
+                        <Setter Property="Foreground" Value="LightGray"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=Status, UpdateSourceTrigger=PropertyChanged}">
+                                <DataTrigger.Value>
+                                    <hamamatsuAPI:CaptureStatus>Error</hamamatsuAPI:CaptureStatus>
+                                </DataTrigger.Value>
+                                <Setter Property="Content" Value="Error"/>
+                                <Setter Property="Foreground" Value="DarkMagenta"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding Path=Status, UpdateSourceTrigger=PropertyChanged}">
+                                <DataTrigger.Value>
+                                    <hamamatsuAPI:CaptureStatus>Busy</hamamatsuAPI:CaptureStatus>
+                                </DataTrigger.Value>
+                                <Setter Property="Content" Value="Busy"/>
+                                <Setter Property="Foreground" Value="DarkOrange"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding Path=Status, UpdateSourceTrigger=PropertyChanged}">
+                                <DataTrigger.Value>
+                                    <hamamatsuAPI:CaptureStatus>Ready</hamamatsuAPI:CaptureStatus>
+                                </DataTrigger.Value>
+                                <Setter Property="Content" Value="Ready"/>
+                                <Setter Property="Foreground" Value="AliceBlue"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding Path=Status, UpdateSourceTrigger=PropertyChanged}">
+                                <DataTrigger.Value>
+                                    <hamamatsuAPI:CaptureStatus>Stable</hamamatsuAPI:CaptureStatus>
+                                </DataTrigger.Value>
+                                <Setter Property="Content" Value="Stable"/>
+                                <Setter Property="Foreground" Value="LightSeaGreen"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding Path=Status, UpdateSourceTrigger=PropertyChanged}">
+                                <DataTrigger.Value>
+                                    <hamamatsuAPI:CaptureStatus>Unstable</hamamatsuAPI:CaptureStatus>
+                                </DataTrigger.Value>
+                                <Setter Property="Content" Value="Unstable"/>
+                                <Setter Property="Foreground" Value="OrangeRed"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding Path=Status, UpdateSourceTrigger=PropertyChanged}">
+                                <DataTrigger.Value>
+                                    <hamamatsuAPI:CaptureStatus>Offline</hamamatsuAPI:CaptureStatus>
+                                </DataTrigger.Value>
+                                <Setter Property="Content" Value="Offline"/>
+                                <Setter Property="Foreground" Value="DarkRed"/>
+                            </DataTrigger>
+
+                        </Style.Triggers>
+                    </Style>
+                </Label.Style>
+            </Label>
+            
+            <!--<Button x:Name="Button_Settings" Content="Settings" DockPanel.Dock="Top" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="Button_Click" IsEnabled="{Binding Path=IsAvailable}"/>-->
+        </DockPanel>
+        <StackPanel  Margin="0,75,0,0">
+            <Label VerticalAlignment="Bottom" Content="Last error:"/>
+            <Label x:Name="Label_ErrorMessage" d:Content="blabla" VerticalAlignment="Bottom" Margin="0,-10,0,0"/>
+            <Label d:Content="0.47" Content="{Binding Path=BufferUsage}" ContentStringFormat="Buffer: {0:P1}" VerticalAlignment="Bottom" Margin="0,-10,0,0"/>
+        </StackPanel>
+        <StackPanel DockPanel.Dock="Left" VerticalAlignment="Bottom">
+            <WrapPanel Margin="0,-2,0,0">
+                <Label Content="Model:" Foreground="White" Margin="0,0,0,0" FontSize="10"/>
+                <Label Content="{Binding Path=Metadata.Model}" Foreground="White" Margin="-7,0,0,0" FontSize="10"/>
+            </WrapPanel>
+            <WrapPanel Margin="0,-4,0,0">
+                <Label Content="SN:" Foreground="White" Margin="0,-5,0,0" FontSize="10"/>
+                <Label Content="{Binding Path=Metadata.CameraID}" Foreground="White" Margin="-7,-5,0,0" FontSize="10"/>
+            </WrapPanel>
+        </StackPanel>
+    </Grid>
+</sardine:VesselUserControl>

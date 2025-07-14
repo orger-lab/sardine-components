@@ -1,0 +1,40 @@
+﻿<sardine:VesselUserControl
+             x:Class="Sardine.Devices.NI.Views.WPF.SimpleDigitalReaderObserver_UI"
+             x:TypeArguments="ni:SimpleDITriggerReader"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Sardine.Devices.NI.Views.WPF"
+             xmlns:sardine="clr-namespace:Sardine.Core.Views.WPF;assembly=Sardine.Core.Views.WPF"
+             xmlns:ni="clr-namespace:Sardine.Devices.NI.DAQ.Controllers;assembly=Sardine.Devices.NI.DAQ"
+             mc:Ignorable="d" 
+             d:DataContext="{d:DesignInstance IsDesignTimeCreatable=False, Type=ni:SimpleDITriggerReader}" UpdateOnlyWithEvents="True"
+             Height="150" Width="150" Background="Gray">
+
+
+    <sardine:VesselUserControl.EventUpdatesCollection>
+        <sardine:VesselPropertyToEventDependencyObject  PropertyName="Value" EventName="ValueChanged"/>
+    </sardine:VesselUserControl.EventUpdatesCollection>
+    <Grid>
+        <StackPanel Margin="5,0,0,0">
+            <DockPanel Margin="0,25,0,0">
+                <Ellipse Width="50" Height="50" Stroke="AliceBlue" StrokeThickness="2" >
+                    <Ellipse.Style>
+                        <Style TargetType="Ellipse">
+                            <Setter Property="Fill" Value="Black"/>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Path=Value, UpdateSourceTrigger=PropertyChanged}" Value="1">
+                                    <Setter Property="Fill" Value="Green"/>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding Path=Value, UpdateSourceTrigger=PropertyChanged}" Value="0">
+                                    <Setter Property="Fill" Value="Red"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Ellipse.Style>
+                </Ellipse>
+            </DockPanel>
+        </StackPanel>
+    </Grid>
+</sardine:VesselUserControl>

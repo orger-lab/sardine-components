@@ -7,35 +7,46 @@ Components representing hardware or data processing functions for use with **[Sa
 | :---------------- | :------: | :----: |
 | Sardine.Constructs        |   ❌  |  |
 | Sardine.ImageProcessing        |   ❌  |  |
+| Sardine.Optics        |   ❌  |  |
+| Sardine.Sequencer        |   ❌  |  |
+| Views\Sardine.Sequencer.Views.WPF        |   ❌  |  |
 ### Data Processes
 | Project Name | NuGet  | Description |
 | :---------------- | :------: | :----: |
-| Sardine.ImageProcessing.BGSubtraction.OpenCV        |   ❌  |  |
-| Sardine.ImageProcessing.BGSubtraction       |   ❌  |  |
-| Sardine.Recording.Data.Text       |   ❌  |  |
-| Sardine.Recording.Metadata.Zebrafish     |   ❌  |  |
-| Sardine.Recording.Metadata        |   ❌  |  |
-| Sardine.Recording.Stream.Binary     |   ❌  |  |
-| Sardine.Tracking.ZebraHRTailTracking.DisplayExtensions      |   ❌  |  |
-| Sardine.Tracking.ZebraHRTailTracking      |   ❌  |  |
-| Sardine.ImageProcessing.BGSubtraction.Views.WPF       |   ❌  |  |
-| Sardine.Recording.Metadata.Zebrafish.Views.WPF     |   ❌  |  |
-| Sardine.Tracking.ZebraHRTailTracking.Views.WPF      |   ❌  |  |
+| Image Processing/Sardine.ImageProcessing.BGSubtraction.OpenCV        |   ❌  |  |
+| Image Processing/Sardine.ImageProcessing.BGSubtraction       |   ❌  |  |
+| Image Processing/Views/Sardine.ImageProcessing.BGSubtraction.Views.WPF       |   ❌  |  |
+| Recorders/Sardine.Recording.Data.Text       |   ❌  |  |
+| Recorders/Sardine.Recording.Metadata.Zebrafish     |   ❌  |  |
+| Recorders/Sardine.Recording.Metadata        |   ❌  |  |
+| Recorders/Sardine.Recording.Stream.Binary     |   ❌  |  |
+| Recorders/Sardine.Recording.Metadata.Zebrafish.Views.WPF     |   ❌  |  |
+| Tracking/Sardine.Tracking.ZebraHRTailTracking.DisplayExtensions      |   ❌  |  |
+| Tracking/Sardine.Tracking.ZebraHRTailTracking      |   ❌  |  |
+| Tracking/Sardine.Tracking.ZebraHRTailTracking.Views.WPF      |   ❌  |  |
 ### Devices
 | Project Name | NuGet  | Description |
 | :---------------- | :------: | :----: |
-| Sardine.Test.AVIReader        |   ❌  |  |
-| Sardine.Test.BinaryStreamToImageFrameReader        |   ❌  |  |
+| Hamamatsu/Sardine.Devices.Hamamatsu.Camera        |   ❌  |  |
+| Hamamatsu/Sardine.Devices.Hamamatsu.Camera.API        |   ❌  |  |
+| Hamamatsu/Sardine.Devices.Hamamatsu.Camera.API.OrcaFlash.Windows        |   ❌  |  |
+| Hamamatsu/Sardine.Devices.Hamamatsu.Camera.Views.WPF        |   ❌  |  |
+| National Instruments/Sardine.Devices.NI.DAQ        |   ❌  |  |
+| National Instruments/Sardine.Devices.NI.Views.WPF        |   ❌  |  |
+| Mock Devices/Sardine.Test.AVIReader        |   ❌  |  |
+| Mock Devices/Sardine.Test.BinaryStreamToImageFrameReader        |   ❌  |  |
 ### Utils
 | Project Name | NuGet  | Description |
 | :---------------- | :------: | :----: |
 | Sardine.Utils.Measurements        |   ❌  |  |
+| Sardine.Utils.Waveforms        |   ❌  |  |
+| Sardine.Utils.Windows        |   ❌  |  |
 ### Visualizers
 | Project Name | NuGet  | Description |
 | :---------------- | :------: | :----: |
-|  Sardine.Display.Skia       |   ❌  |  |
-|  Sardine.Display.Skia.Views      |   ❌  |  |
-|  Views/Sardine.Display.Skia.Views.WPF      |   ❌  |  |
+| Display/Sardine.Display.Skia       |   ❌  |  |
+| Display/Sardine.Display.Skia.Views      |   ❌  |  |
+| Display/Views/Sardine.Display.Skia.Views.WPF      |   ❌  |  |
 
 ## Quick Start
 + Operating System requirements: Windows 10 version 1607 or above

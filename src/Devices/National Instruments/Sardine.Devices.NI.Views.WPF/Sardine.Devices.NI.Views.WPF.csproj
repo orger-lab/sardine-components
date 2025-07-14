@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows7.0</TargetFramework>
+    <Nullable>warnings</Nullable>
+    <UseWPF>true</UseWPF>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\sardine\src\Sardine.Core.Views.WPF\Sardine.Core.Views.WPF.csproj" />
+    <ProjectReference Include="..\..\..\..\..\sardine\src\Sardine.Core\Sardine.Core.csproj" />
+    <ProjectReference Include="..\Sardine.Devices.NI.DAQ\Sardine.Devices.NI.DAQ.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="ClockSourceGenerator_UI.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+</Project>
