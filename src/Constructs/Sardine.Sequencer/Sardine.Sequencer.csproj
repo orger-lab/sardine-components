@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="BlockPatternProviders.cs" />
+    <Compile Remove="HLSLFMNEW.cs" />
+    <Compile Remove="WaveformGenerator.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Utils\Sardine.Utils.Measurements\Sardine.Utils.Measurements.csproj" />
+    <ProjectReference Include="..\..\Utils\Sardine.Utils.Waveforms\Sardine.Utils.Waveforms.csproj" />
+    <ProjectReference Include="..\Sardine.Constructs\Sardine.Constructs.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <PlatformTarget>x64</PlatformTarget>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Constructs\Sardine.Constructs\Sardine.Constructs.csproj" />
+    <ProjectReference Include="..\..\..\Constructs\Sardine.Sequencer\Sardine.Sequencer.csproj" />
+    <ProjectReference Include="..\..\..\Data Processes\Sardine.Recording.Data.Text\Sardine.Recording.Data.Text.csproj" />
+    <ProjectReference Include="..\..\..\Utils\Sardine.Utils.Measurements\Sardine.Utils.Measurements.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="NationalInstruments.Common">
+      <HintPath>NationalInstruments.Common 19.1.40\NationalInstruments.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NationalInstruments.DAQmx">
+      <HintPath>21.3.45.49317\NationalInstruments.DAQmx.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="21.3.45.49317\" />
+    <Folder Include="NationalInstruments.Common 19.1.40\" />
+  </ItemGroup>
+
+</Project>

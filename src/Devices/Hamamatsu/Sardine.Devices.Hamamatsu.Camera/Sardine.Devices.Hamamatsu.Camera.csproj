@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Constructs\Sardine.Constructs\Sardine.Constructs.csproj" />
+    <ProjectReference Include="..\..\..\Constructs\Sardine.ImageProcessing\Sardine.ImageProcessing.csproj" />
+    <ProjectReference Include="..\..\..\Constructs\Sardine.Optics\Sardine.Optics.csproj" />
+    <ProjectReference Include="..\Sardine.Devices.Hamamatsu.Camera.API\Sardine.Devices.Hamamatsu.Camera.API.csproj" />
+  </ItemGroup>
+
+</Project>
