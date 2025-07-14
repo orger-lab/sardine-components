@@ -233,9 +233,8 @@ ModelManifest.xml
 # FAKE - F# Make
 .fake/
 
-OrgerLab/OrgerLab\.Modules\.Display/FastFowardDisplay\.cs
+src/Devices/National Instruments/Sardine.Devices.NI.DAQ/21.3.45.49317/*
+src/Devices/National Instruments/Sardine.Devices.NI.DAQ/NationalInstruments.Common 19.1.40/*
+src/Devices/Hamamatsu/Sardine.Devices.Hamamatsu.Camera.API.OrcaFlash.Windows/lib/*
+samples/FictiveFishTrackerExampleApp/opencv/*
 
-OrgerLab/Redwood\.Tracking/
-
-OrgerLab/packages/
-*.dll
