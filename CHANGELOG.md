@@ -8,7 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 ### Added
 + Added components representing a set of Thorlabs devices.
 
-[0.1.0] - 2025-07-08
+[0.1.1] - 2025-07-08
 --------------------
 ### Security 
 + Removed third-party library files.
@@ -28,7 +28,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 + Added a simple tail tracker that reads data from a recording as an example;
 + Added the necessary components to make the tail tracker work.
 
-[unreleased]: https://github.com/orger-lab/hybridsp-live/compare/v0.1.1...HEAD
-[0.1.1]: https://github.com/orger-lab/hybridsp-live/releases/tag/v0.1.1
-[0.1.0]: https://github.com/orger-lab/hybridsp-live/releases/tag/v0.1.0
-[0.0.1]: https://github.com/orger-lab/hybridsp-live/releases/tag/v0.0.1
+[unreleased]: https://github.com/orger-lab/sardine-components/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/orger-lab/sardine-components/releases/tag/v0.1.1
+[0.1.0]: https://github.com/orger-lab/sardine-components/releases/tag/v0.1.0
+[0.0.1]: https://github.com/orger-lab/sardine-components/releases/tag/v0.0.1
