@@ -9,7 +9,7 @@ Components representing hardware or data processing functions for use with **[Sa
 | Sardine.ImageProcessing        |   ❌  |  |
 | Sardine.Optics        |   ❌  |  |
 | Sardine.Sequencer        |   ❌  |  |
-| Views\Sardine.Sequencer.Views.WPF        |   ❌  |  |
+| Views/Sardine.Sequencer.Views.WPF        |   ❌  |  |
 ### Data Processes
 | Project Name | NuGet  | Description |
 | :---------------- | :------: | :----: |
