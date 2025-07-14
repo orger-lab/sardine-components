@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows7.0</TargetFramework>
+    <Nullable>warnings</Nullable>
+    <UseWPF>true</UseWPF>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\sardine\src\Sardine.Core.Views.WPF\Sardine.Core.Views.WPF.csproj" />
+    <ProjectReference Include="..\..\..\Utils\Sardine.Utils.Windows\Sardine.Utils.Windows.csproj" />
+    <ProjectReference Include="..\Sardine.Devices.Hamamatsu.Camera.API\Sardine.Devices.Hamamatsu.Camera.API.csproj" />
+    <ProjectReference Include="..\Sardine.Devices.Hamamatsu.Camera\Sardine.Devices.Hamamatsu.Camera.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="RemoteFramerateCameraOptionsUI.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+</Project>

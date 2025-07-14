@@ -1,0 +1,22 @@
+﻿<sardine:VesselUserControl x:Class="Sardine.Devices.NI.Views.WPF.SimpleAOWriter_UI"
+                           x:TypeArguments="daq:SimpleAOWriter"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Sardine.Devices.NI.Views.WPF"
+                           xmlns:daq="clr-namespace:Sardine.Devices.NI.DAQ.Controllers;assembly=Sardine.Devices.NI.DAQ"
+                           xmlns:sardine="clr-namespace:Sardine.Core.Views.WPF;assembly=Sardine.Core.Views.WPF"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Background="Gray">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBox Grid.Row="0" Text="{Binding RelativeSource={RelativeSource AncestorType=UserControl}, Path=Value, UpdateSourceTrigger=PropertyChanged}"/>
+        <Button Grid.Row="1" Content="Update" Click="Button_Click"/>
+
+    </Grid>
+</sardine:VesselUserControl>
