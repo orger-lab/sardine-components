@@ -1,7 +1,7 @@
-﻿using FictiveFishTracker;
+﻿using VirtualFishTracker;
 using Sardine.Core.Views.WPF;
 
-namespace FictiveFishTrackerExampleApp
+namespace VirtualFishTrackerExampleApp
 {
     public partial class App : SardineApplication<TailTracker> { }
 

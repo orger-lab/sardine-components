@@ -11,7 +11,7 @@ using Sardine.Recording.Stream.Binary;
 using Sardine.Test.AVIReader;
 using Sardine.Tracking.ZebraHRTailTracking;
 
-namespace FictiveFishTracker
+namespace VirtualFishTracker
 {
     public class TailTracker : Fleet
     {
