@@ -11,6 +11,8 @@
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
+BenchmarkDotNet.Artifacts/
+
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/

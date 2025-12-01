@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Sardine.Core.Views.WPF" Version="1.1.12" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Data Processes\Sardine.Test.FictiveWorkload.Views.WPF\Sardine.Test.FictiveWorkload.Views.WPF.csproj" />
+    <ProjectReference Include="..\StressTest\StressTest.csproj" />
+  </ItemGroup>
+
+</Project>

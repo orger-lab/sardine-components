@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Sardine.Core" Version="1.1.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Data Processes\Sardine.Recording.Data.Text\Sardine.Recording.Data.Text.csproj" />
+    <ProjectReference Include="..\..\src\Data Processes\Sardine.Test.FictiveWorkload\Sardine.Test.FictiveWorkload.csproj" />
+    <ProjectReference Include="..\..\src\Data Processes\Sardine.Test.Timestamper\Sardine.Test.Timestamper.csproj" />
+  </ItemGroup>
+
+</Project>
