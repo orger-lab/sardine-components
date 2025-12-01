@@ -70,10 +70,10 @@ A component that uses the metadata service is also present, and allows setting m
 
 <div align="center">
   <div>
-  <img src="samples/FictiveFishTrackerExampleApp/screenshot.png" width="600">
+  <img src="samples/VirtualFishTrackerExampleApp/screenshot.png" width="600">
     </div>
   <div>
-  <img src="samples/FictiveFishTrackerExampleApp/graph.png" width="600">
+  <img src="samples/VirtualFishTrackerExampleApp/graph.png" width="600">
 </div>
 </div>
 
